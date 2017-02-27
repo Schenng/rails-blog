@@ -1,4 +1,4 @@
-<h1>Listing articles</h1>
+<h1>Articles Index</h1>
 
 <%= link_to 'New Article', new_article_path %>
 
@@ -17,8 +17,12 @@
       <td><%= link_to 'Destroy', article_path(article),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
-
     </tr>
   <% end %>
+
 </table>
 
+<!-- Render parials and passing variables -->
+<!--  <% @articles.each do |article| %>
+    <%= render 'articles/accordion', article: article %>
+  <% end %> -->
