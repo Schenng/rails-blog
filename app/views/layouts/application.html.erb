@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Booked</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +11,20 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container" style="margin-top:50px">
+
+      <div class="page-header" style>
+        <h1>Blogg</h1>
+      </div>
+      <div style="padding-top:20px;padding-bottom:20px">
+        <button type="button" class="btn btn-info btn-sm"><%= link_to 'Create', new_article_path %></button>
+        <button type="button" class="btn btn-info btn-sm"><%= link_to 'View', articles_path %></button>
+      <hr>
+      </div>
+      <!-- Rails inserts the pages here -->
+      <%= yield %>
+
+    </div>
   </body>
 </html>
+

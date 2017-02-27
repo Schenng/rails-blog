@@ -1,11 +1,14 @@
-<h1>Articles Index</h1>
+<!-- This was a link to create a new article. It brings up the partial -->
+<!-- <%= link_to 'New Article', new_article_path %> -->
 
-<%= link_to 'New Article', new_article_path %>
-
-<table>
+<h4>Articles</h4>
+<table class="table table-striped table-hover table-bordered">
   <tr>
     <th>Title</th>
     <th>Text</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
 
   <% @articles.each do |article| %>
@@ -21,6 +24,7 @@
   <% end %>
 
 </table>
+
 
 <!-- Render parials and passing variables -->
 <!--  <% @articles.each do |article| %>
